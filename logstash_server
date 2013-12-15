@@ -36,7 +36,6 @@ cp $ROOT/conf/indexer.conf .
 cp $ROOT/init/logstash.conf /etc/init/
 mkdir /var/lib/logstash # Required working directory for logstash
 service logstash start
-popd
 
 # Install and configure the Kibana frontend
 pushd /opt/
@@ -48,6 +47,8 @@ gem install bundler
 bundle install
 cp $ROOT/init/kibana.conf /etc/init/kibana.conf
 service kibana start
+popd
+
 popd
 
 # Up the open FD limit for everyone
