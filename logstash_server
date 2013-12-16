@@ -8,6 +8,7 @@ ROOT=$(cd `dirname ${BASH_SOURCE[0]}` && echo $PWD)
 
 apt-get update
 apt-get install python-software-properties git
+apt-get install software-properties-common
 add-apt-repository ppa:webupd8team/java
 apt-get install -y --force-yes redis-server oracle-jdk7-installer rubygems ruby1.9.1-dev
 apt-get update
